@@ -1,0 +1,138 @@
+.navLink {
+  text-decoration: none;
+  color: black;
+}
+.navLinkWarp {
+  display: flex;
+  justify-content: end;
+}
+.Navicon {
+  width: 25px;
+}
+.BGmain {
+  width: 100%;
+  height: 250px;
+  background-image: url("/public/images/banner/blog_title_bg.jpg");
+}
+
+.searchInput {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgb(141, 138, 138);
+}
+.searchActive {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: 500ms ease;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.searchInActive {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: 500ms ease;
+}
+.dash {
+  height: 2px;
+  width: 30px;
+  background-color: rgb(152, 7, 7);
+  margin-top: 12px;
+  margin-right: 10px;
+  font-family: "Jost", sans-serif;
+}
+.bannerImg {
+  width: 272px;
+  animation: bannerImgAnimation 2s ease;
+}
+
+@keyframes bannerImgAnimation {
+  0% {
+    margin-right: 300px;
+    opacity: 0;
+  }
+  100% {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+
+.BannerleftMain {
+  animation: bannerTxt 2s ease;
+}
+@keyframes bannerTxt {
+  0% {
+    margin-left: 200px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+.collection_left {
+  height: 330px;
+  width: 60%;
+  background-image: url("/public/images/collections/nav-bg.jpg");
+  background-size: cover;
+  animation: col-left 2s ease;
+}
+.rightOne {
+  height: 170px;
+  width: 83%;
+  background-image: url("/public/images/collections/banner_2.jpg");
+  background-size: cover;
+  animation: right-one 2s ease;
+}
+.rightTwo {
+  height: 157px;
+  width: 41%;
+  background-image: url("/public/images/collections/collection_grid_3.jpg");
+  background-size: cover;
+}
+.rightThree {
+  height: 157px;
+  width: 41%;
+  background-image: url("/public/images/collections/blog-1.jpg");
+  background-size: cover;
+}
+.rightAnim {
+  animation: rightthree 2s ease;
+}
+@keyframes col-left {
+  0% {
+    margin-right: 200px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes right-one {
+  0% {
+    margin-left: 100px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+@keyframes rightthree {
+  0% {
+    margin-top: 100px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
