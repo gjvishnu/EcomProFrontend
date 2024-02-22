@@ -1,3 +1,19 @@
+/* media queries */
+@media (max-width: 399px) {
+  .navLinkWarp {
+    display: none !important;
+  }
+  .thirdP {
+    font-size: 9px !important;
+  }
+  .secH {
+    font-size: 20px;
+  }
+  .bannerImg {
+    margin-left: 90px;
+  }
+}
+
 .navLink {
   text-decoration: none;
   color: black;
@@ -19,6 +35,8 @@
   width: 100%;
   border: none;
   border-bottom: 1px solid rgb(141, 138, 138);
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 .searchActive {
   opacity: 1;
@@ -135,4 +153,27 @@
     margin-top: 0;
     opacity: 1;
   }
+}
+
+.searchInput:focus-visible,
+.searchInput:focus {
+  outline: none;
+  border-color: transparent;
+}
+
+.xmarkimg {
+  width: 32px;
+}
+
+.xmarkActive {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(15px);
+  transition: 500ms ease;
+}
+.xmarkInactive {
+  opacity: 1;
+  visibility: hidden;
+  transform: translateX(0);
+  transition: 500ms ease;
 }

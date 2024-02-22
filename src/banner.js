@@ -15,14 +15,15 @@ export function Banner() {
                   <div className="dash"></div> <p>New Trends</p>
                 </div>
                 <div>
-                  <h1>
-                     
+                  <h1 className="secH">
                     <span style={{ color: "rgb(152, 7, 7)" }}>Hello</span> New
                     Season
                   </h1>
                 </div>
                 <div>
-                  <p>LIMITED TIME OFFER - UP TO 60% AND FREE SHIPPING</p>
+                  <p className="thirdP">
+                    LIMITED TIME OFFER - UP TO 60% AND FREE SHIPPING
+                  </p>
                 </div>
               </div>
             </div>
