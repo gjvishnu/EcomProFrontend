@@ -1,7 +1,7 @@
 /* media queries */
-@media (max-width: 399px) {
-  .navLinkWarp {
-    display: none !important;
+@media (max-width: 550px) {
+  .navlinks {
+    display: none;
   }
   .thirdP {
     font-size: 9px !important;
@@ -12,19 +12,140 @@
   .bannerImg {
     margin-left: 90px;
   }
+  .menuImg {
+    margin-left: 17px !important;
+  }
+  .resicons {
+    display: block !important;
+  }
 }
 
-.navLink {
-  text-decoration: none;
-  color: black;
+@media (max-width: 770px) {
+  .xmarkActiveres {
+    width: 28px;
+    padding-right: 4px;
+    margin-right: 5px;
+  }
+  .collectionLg {
+    display: none;
+  }
+  .collectionRes {
+    display: block !important;
+  }
 }
-.navLinkWarp {
-  display: flex;
-  justify-content: end;
+
+/* key frames */
+
+@keyframes bannerImgAnimation {
+  0% {
+    margin-right: 300px;
+    opacity: 0;
+  }
+  100% {
+    margin-right: 0;
+    opacity: 1;
+  }
 }
-.Navicon {
-  width: 25px;
+@keyframes bannerTxt {
+  0% {
+    margin-left: 200px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
 }
+@keyframes col-left {
+  0% {
+    margin-right: 200px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes right-one {
+  0% {
+    margin-left: 100px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+@keyframes rightthree {
+  0% {
+    margin-top: 100px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes collrespicOne {
+  0% {
+    opacity: 0;
+    margin-right: 200px;
+  }
+  100% {
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+@keyframes collrespicTwo {
+  0% {
+    opacity: 0;
+    margin-left: 200px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+@keyframes collrespicThree {
+  0% {
+    opacity: 0;
+    margin-right: 200px;
+  }
+  100% {
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+
+/* //////////////////////////// */
+.collectionRes {
+  display: none;
+}
+.resicons {
+  display: none;
+}
+.searchicn {
+  width: 30px;
+}
+.carticn {
+  width: 33px;
+}
+.usericn {
+  width: 30px;
+}
+.menuImg {
+  width: 36px;
+  margin-left: 38px;
+}
+
 .BGmain {
   width: 100%;
   height: 250px;
@@ -65,36 +186,14 @@
   animation: bannerImgAnimation 2s ease;
 }
 
-@keyframes bannerImgAnimation {
-  0% {
-    margin-right: 300px;
-    opacity: 0;
-  }
-  100% {
-    margin-right: 0;
-    opacity: 1;
-  }
-}
-
 .BannerleftMain {
-  animation: bannerTxt 2s ease;
-}
-@keyframes bannerTxt {
-  0% {
-    margin-left: 200px;
-    opacity: 0;
-  }
-
-  100% {
-    margin-left: 0;
-    opacity: 1;
-  }
+  animation: bannerTxt 1s ease;
 }
 
 .collection_left {
   height: 330px;
   width: 60%;
-  background-image: url("/public/images/collections/nav-bg.jpg");
+  background-image: url("/public/images/collections/women.jpg");
   background-size: cover;
   animation: col-left 2s ease;
 }
@@ -120,40 +219,6 @@
 .rightAnim {
   animation: rightthree 2s ease;
 }
-@keyframes col-left {
-  0% {
-    margin-right: 200px;
-    opacity: 0;
-  }
-
-  100% {
-    margin-right: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes right-one {
-  0% {
-    margin-left: 100px;
-    opacity: 0;
-  }
-
-  100% {
-    margin-left: 0;
-    opacity: 1;
-  }
-}
-@keyframes rightthree {
-  0% {
-    margin-top: 100px;
-    opacity: 0;
-  }
-
-  100% {
-    margin-top: 0;
-    opacity: 1;
-  }
-}
 
 .searchInput:focus-visible,
 .searchInput:focus {
@@ -176,4 +241,25 @@
   visibility: hidden;
   transform: translateX(0);
   transition: 500ms ease;
+}
+.resCollectOne {
+  height: 100px;
+  width: 100%;
+  background-image: url("/public/images/collections/stripOne.jpg");
+  background-size: cover;
+  animation: collrespicOne 2s ease;
+}
+.resCollectTwo {
+  height: 100px;
+  width: 100%;
+  background-image: url("/public/images/collections/stripeTwo.jpg");
+  background-size: cover;
+  animation: collrespicTwo 2s ease;
+}
+.resCollectthree {
+  height: 100px;
+  width: 100%;
+  background-image: url("/public/images/collections/stripeThree.jpg");
+  background-size: cover;
+  animation: collrespicThree 2s ease;
 }
