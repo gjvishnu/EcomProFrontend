@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 
 export function Navbar() {
   const [search, setSearch] = useState(false);
+  const [offcan , setOffcan] = useState(false)
   const [xmark, setXmark] = useState(false);
 
   const handleSearch = (e) => {
@@ -20,14 +21,19 @@ export function Navbar() {
     setSearch(!search);
   };
 
+  const handleOffcan = (e)=>{
+    e.preventDefault();
+    setOffcan(!offcan)
+
+  }
+
   return (
     <Fragment>
       <div className="navMain border">
         <div className="container">
           <div className="row py-3">
             <div className="col-6">
-               
-              <img src="images/icons/tylorgang.png" style={{width:"60px"}}/> 
+              <img src="images/icons/tylorgang.png" style={{ width: "60px" }} />
             </div>
             <div className="col-6">
               <div className="navlinkMain d-flex justify-content-end">
@@ -61,9 +67,46 @@ export function Navbar() {
                 </div>
 
                 <div className="">
-                  <img src="images/icons/menu.png" className="menuImg" />
+                 <a href="" onClick={(e)=>handleOffcan(e)}> <img src="images/icons/menu.png" className="menuImg" /> </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* offcanvas */}
+
+      <div className={`p-3 ${offcan ? "offcanvasMainActive" : "offcanvasMainInactive"} `}>
+        <div className="linksWarp">
+          <div className="d-flex justify-content-between">
+            <div>
+              <a href="" style={{ textDecoration: "none" }}>
+                <h6 className="colorGray">Profile</h6>
+              </a>
+            </div>
+            <div>
+              <img src="images/icons/user.png" style={{ width: "25px" }} />
+            </div>
+          </div>
+          <div className="d-flex justify-content-between my-3">
+            <div>
+              <a href="" style={{ textDecoration: "none" }}>
+                <h6 className="colorGray">Cart</h6>
+              </a>
+            </div>
+            <div>
+              <img src="images/icons/cart.png" style={{ width: "30px" }} />
+            </div>
+          </div>
+          <div className="d-flex justify-content-between ">
+            <div>
+              <a href="" style={{ textDecoration: "none" }}>
+                <h6 className="colorGray">My Orders</h6>
+              </a>
+            </div>
+            <div>
+              <img src="images/icons/order.png" style={{ width: "30px" }} />
             </div>
           </div>
         </div>

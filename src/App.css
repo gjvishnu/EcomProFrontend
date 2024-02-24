@@ -34,6 +34,19 @@
   }
 }
 
+@media (max-width: 950px) {
+  .offcanvasMainActive {
+    height: 200px;
+    width: 170px !important;
+    border: 1px solid rgb(124, 122, 122);
+    background-color: white;
+    position: absolute;
+    right: 1px;
+    z-index: 1;
+    visibility: visible;
+  }
+}
+
 /* key frames */
 
 @keyframes bannerImgAnimation {
@@ -262,4 +275,41 @@
   background-image: url("/public/images/collections/stripeThree.jpg");
   background-size: cover;
   animation: collrespicThree 2s ease;
+}
+.strip {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(88, 87, 87);
+  display: flex;
+  align-items: center;
+}
+.color {
+  color: rgb(152, 7, 7);
+}
+.offcanvasMainActive {
+  height: 350px;
+  width: 190px;
+  border: 1px solid rgb(124, 122, 122);
+  background-color: white;
+  position: absolute;
+  right: 1px;
+  z-index: 1;
+  visibility: visible;
+  transition: 500ms ease;
+  opacity: 1;
+}
+.offcanvasMainInactive {
+  height: 350px;
+  width: 190px;
+  border: 1px solid rgb(124, 122, 122);
+  background-color: white;
+  position: absolute;
+  right: 1px;
+  z-index: 1;
+  visibility: hidden;
+  transition: 500ms ease;
+  opacity: 0;
+}
+.colorGray {
+  color: rgb(97, 96, 96);
 }

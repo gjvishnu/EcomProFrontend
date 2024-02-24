@@ -1,6 +1,16 @@
 import { Fragment } from "react";
 
 export function Collection() {
+  const imgArr = [
+    "brand1",
+    "brand2",
+    "brand3",
+    "brand4",
+    "brand5",
+    "brand6",
+    "brand7",
+  ];
+
   return (
     <Fragment>
       <div className="collectionMain container mt-3 r ">
@@ -59,6 +69,25 @@ export function Collection() {
                 <p className="text-white">Shop now</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      {/* our brands */}
+      <div className="container my-4">
+        <h3 className="text-center my-3"> <span className="color">Our</span>  Brands</h3>
+        <div className="strip ">
+          <div className=" d-felx  ">
+            <marquee>
+              <div className="mx-5">
+                {imgArr.map((img, i) => (
+                  <img
+                    key={i}
+                    src={`images/brands/${img}.png`}
+                    className="mx-4"
+                  />
+                ))}
+              </div>
+            </marquee>
           </div>
         </div>
       </div>
