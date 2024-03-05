@@ -1,10 +1,15 @@
-import { Fragment,   } from "react";
- 
+import { Fragment, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "./actions/productsAction";
 
 export function ProductCard() {
+  const dispatch = useDispatch();
+  const { products, loading } = useSelector((state) => state.productsState);
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [dispatch]);
 
- 
-
+  
   return (
     <Fragment>
       <div className="container my-5">
@@ -12,25 +17,30 @@ export function ProductCard() {
           <span className="color">New</span> Drops
         </h2>
         <div className="row">
-          <div className="col-3 d-flex justify-content-center">
-            <div className="cardDiv">
-              <div className="cardimg pb-3 d-flex justify-content-center align-items-end ">
-                <button className="py-1 addCartBtn colorGray txt">
-                  Add to Cart
-                </button>
+          {products &&
+            products.map((prods) => (
+              <div className="col-lg-3 col-12 col-md-6 d-flex justify-content-center">
+                <div className="cardDiv">
+                  <div
+                    className="cardimg pb-3 d-flex justify-content-center align-items-end "
+                    style={{ backgroundImage: `url(${prods.images[0].image})` }}
+                  >
+                    <button className="py-1 addCartBtn colorGray txt">
+                      Add to Cart
+                    </button>
+                  </div>
+                  <div className="mt-2 mb-0">
+                    <p className="colorGray mb-2">{prods.category}</p>
+                  </div>
+                  <div>
+                    <h5>{prods.name}</h5>
+                  </div>
+                  <div>
+                    <p>₹{prods.price}</p>
+                  </div>
+                </div>
               </div>
-              <div className="mt-2 mb-0">
-                <p className="colorGray mb-2">Tshirt</p>
-              </div>
-              <div>
-                <h6>Cropped Faux Leather Jacket</h6>
-              </div>
-              <div>
-                <p>₹ 6000</p> 
-              </div>
-            </div>
-          </div>
-       
+            ))}
         </div>
       </div>
     </Fragment>

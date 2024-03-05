@@ -319,7 +319,6 @@
 .cardimg {
   height: 321px;
   width: 270px;
-  background-image: url("/public/images/product/product_0.jpg");
   background-size: cover;
   background-position: center;
 }
