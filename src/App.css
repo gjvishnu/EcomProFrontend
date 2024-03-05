@@ -289,27 +289,59 @@
 .offcanvasMainActive {
   height: 350px;
   width: 190px;
-  border: 1px solid rgb(124, 122, 122);
+  border: 1px solid rgb(234, 232, 232);
   background-color: white;
   position: absolute;
   right: 1px;
   z-index: 1;
   visibility: visible;
   transition: 500ms ease;
+  transform: translateY(0);
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.4);
   opacity: 1;
 }
 .offcanvasMainInactive {
   height: 350px;
   width: 190px;
-  border: 1px solid rgb(124, 122, 122);
   background-color: white;
   position: absolute;
   right: 1px;
   z-index: 1;
   visibility: hidden;
   transition: 500ms ease;
+  transform: translateY(35px);
   opacity: 0;
 }
 .colorGray {
   color: rgb(97, 96, 96);
+}
+
+.cardimg {
+  height: 321px;
+  width: 270px;
+  background-image: url("/public/images/product/product_0.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.addCartBtn {
+  background-color: white;
+  border: none;
+  padding: 0px;
+  width: 205px;
+visibility: hidden
+;  transition: 500ms ease;
+  opacity: 0;
+}
+.cardDiv:hover .addCartBtn {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  padding: 0px;
+  width: 205px;
+visibility: visible;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.4);
+  transition: 500ms ease;
+  opacity: 1;
+}
+.txt{
+  font-family: 'jost','san-serif';
 }

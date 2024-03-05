@@ -1,10 +1,21 @@
-import { Fragment, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 export function Navbar() {
   const [search, setSearch] = useState(false);
-  const [offcan , setOffcan] = useState(false)
+  const [offcan, setOffcan] = useState(false);
   const [xmark, setXmark] = useState(false);
+
+  const menubar = useRef();
+
+  // useEffect(() => {
+  //   let handler = (e) => {
+  //     if (!menubar.current.contains(e.target)) {
+  //       setOffcan(!offcan);
+  //     }
+  //     console.log("use eff");
+  //   };
+  //   document.addEventListener("mousedown", handler);
+  // });
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -21,11 +32,10 @@ export function Navbar() {
     setSearch(!search);
   };
 
-  const handleOffcan = (e)=>{
+  const handleOffcan = (e) => {
     e.preventDefault();
-    setOffcan(!offcan)
-
-  }
+    setOffcan(!offcan);
+  };
 
   return (
     <Fragment>
@@ -67,7 +77,9 @@ export function Navbar() {
                 </div>
 
                 <div className="">
-                 <a href="" onClick={(e)=>handleOffcan(e)}> <img src="images/icons/menu.png" className="menuImg" /> </a>
+                  <a href="" onClick={(e) => handleOffcan(e)}>
+                    <img src="images/icons/menu.png" className="menuImg" />{" "}
+                  </a>
                 </div>
               </div>
             </div>
@@ -77,12 +89,17 @@ export function Navbar() {
 
       {/* offcanvas */}
 
-      <div className={`p-3 ${offcan ? "offcanvasMainActive" : "offcanvasMainInactive"} `}>
+      <div
+        className={`p-3 ${
+          offcan ? "offcanvasMainActive" : "offcanvasMainInactive"
+        } `}
+        ref={menubar}
+      >
         <div className="linksWarp">
           <div className="d-flex justify-content-between">
             <div>
               <a href="" style={{ textDecoration: "none" }}>
-                <h6 className="colorGray">Profile</h6>
+                <h6 className="colorGray mt-1">Profile</h6>
               </a>
             </div>
             <div>
@@ -92,17 +109,17 @@ export function Navbar() {
           <div className="d-flex justify-content-between my-3">
             <div>
               <a href="" style={{ textDecoration: "none" }}>
-                <h6 className="colorGray">Cart</h6>
+                <h6 className="colorGray mt-1">Cart</h6>
               </a>
             </div>
             <div>
               <img src="images/icons/cart.png" style={{ width: "30px" }} />
             </div>
           </div>
-          <div className="d-flex justify-content-between ">
+          <div className="d-flex justify-content-between   ">
             <div>
               <a href="" style={{ textDecoration: "none" }}>
-                <h6 className="colorGray">My Orders</h6>
+                <h6 className="colorGray mt-1">My Orders</h6>
               </a>
             </div>
             <div>
