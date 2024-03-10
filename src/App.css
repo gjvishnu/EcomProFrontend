@@ -46,7 +46,24 @@
     visibility: visible;
   }
 }
-
+@media (max-width: 525px) {
+  .formWarpMain {
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 75vh !important;
+  }
+  .formInpt {
+    width: 290px !important;
+  }
+  .formimgPre {
+    height: 45px !important;
+    width: 45px !important;
+    right: 13px !important;
+  }
+  .formStaticImg {
+    width: 21px;
+  }
+}
 /* key frames */
 
 @keyframes bannerImgAnimation {
@@ -327,8 +344,8 @@
   border: none;
   padding: 0px;
   width: 205px;
-visibility: hidden
-;  transition: 500ms ease;
+  visibility: hidden;
+  transition: 500ms ease;
   opacity: 0;
 }
 .cardDiv:hover .addCartBtn {
@@ -336,11 +353,77 @@ visibility: hidden
   border: none;
   padding: 0px;
   width: 205px;
-visibility: visible;
+  visibility: visible;
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.4);
   transition: 500ms ease;
   opacity: 1;
 }
-.txt{
-  font-family: 'jost','san-serif';
+.txt {
+  font-family: "jost", "san-serif";
+}
+.formBg {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/public/images/bgs/formBg1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formWarpMain {
+  height: 60vh;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  position: relative;
+}
+
+.formInpt {
+  width: 305px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+  color: white;
+}
+.formInpt:focus-visible,
+.formInpt:focus {
+  outline: none;
+  border-color: transparent;
+}
+.formSubmit {
+  background: white;
+  border: none;
+  width: 100%;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  border-radius: 7px;
+}
+
+.formimgPre {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  right: 29px;
+  top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgMainDiv {
+  height: 352px;
+  width: 300px;
+  border: 1px solid black;
+}
+.boxOne {
+  height: 65px;
+  width: 65px;
+  border: 1px solid black;
 }

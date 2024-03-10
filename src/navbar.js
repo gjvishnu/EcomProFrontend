@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Navbar() {
   const [search, setSearch] = useState(false);
@@ -6,17 +7,7 @@ export function Navbar() {
   const [xmark, setXmark] = useState(false);
 
   const menubar = useRef();
-
-  // useEffect(() => {
-  //   let handler = (e) => {
-  //     if (!menubar.current.contains(e.target)) {
-  //       setOffcan(!offcan);
-  //     }
-  //     console.log("use eff");
-  //   };
-  //   document.addEventListener("mousedown", handler);
-  // });
-
+ 
   const handleSearch = (e) => {
     e.preventDefault();
     setSearch(!search);
@@ -54,9 +45,9 @@ export function Navbar() {
                   <a>
                     <img src="images/icons/cart.png" className="carticn mx-4" />
                   </a>
-                  <a>
+                  <Link to="/login">
                     <img src="images/icons/user.png" className="usericn" />
-                  </a>
+                  </Link>
                 </div>
 
                 <div>

@@ -17,7 +17,7 @@ export function ProductCard() {
           <span className="color">New</span> Drops
         </h2>
         <div className="row">
-          {products &&
+          {products &&  
             products.map((prods) => (
               <div className="col-lg-3 col-12 col-md-6 d-flex justify-content-center">
                 <div className="cardDiv">
