@@ -7,8 +7,8 @@ import { ProductCard } from "./productCard";
 export function Home() {
   return (
     <Fragment>
-      <Navbar />
-      <Banner />
+      <Navbar/>
+       <Banner />
       <Collection/>
       <ProductCard/>
     </Fragment>

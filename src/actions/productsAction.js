@@ -1,9 +1,6 @@
 import axios from "axios";
-import {
-  productFail,
-  productsRequest,
-  productsSuccess,
-} from "../slices/productsSlice";
+import {useParams} from 'react-router-dom'
+import {productFail,productsRequest,productsSuccess,} from "../slices/productsSlice";
 
 export const getProducts = () => async (dispatch) => {
   try {
