@@ -31,7 +31,7 @@ export function Navbar() {
         <div className="container">
           <div className="row py-3">
             <div className="col-6">
-              <img src="../images/icons/tylorgang.png" style={{ width: "60px" }} />
+            <Link to={"/"}> <img src="../images/icons/tylorgang.png" style={{ width: "60px" }} /></Link> 
             </div>
             <div className="col-6">
               <div className="navlinkMain d-flex justify-content-end">
